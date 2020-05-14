@@ -10,7 +10,6 @@ class Point {
     }
 
     static determineMinimumOfArray(points) {
-        console.log('points', points);
         if (Object.keys(points).length <= 1) {
             throw new IllegalArgumentException("too less points");
         }

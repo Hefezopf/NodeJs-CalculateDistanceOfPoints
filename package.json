@@ -1,0 +1,31 @@
+{
+  "name": "node-js-calc-points",
+  "version": "1.0.0",
+  "description": "Start with:",
+  "main": "NodeJsCalcPoints.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.2",
+    "request": "^2.88.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hefezopf/NodeJsCalcPoints.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hefezopf/NodeJsCalcPoints/issues"
+  },
+  "homepage": "https://github.com/Hefezopf/NodeJsCalcPoints#readme"
+}
