@@ -1,5 +1,7 @@
 # NodeJsCalcPoints
 
+The Javascript NodeJs Program calculates the minimum distance of points.
+
 ## Prepare
 npm install
 
@@ -11,5 +13,4 @@ http://localhost:8080/
 node nodeJsCalcPointsApp.js
 
 ## Test
-
 npm test
