@@ -1,7 +1,7 @@
 {
   "name": "node-js-calc-points",
   "version": "1.0.0",
-  "description": "Start with:",
+  "description": "The Javascript NodeJs Program calculates the minimum distance of points",
   "main": "NodeJsCalcPoints.js",
   "directories": {
     "test": "test"
