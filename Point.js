@@ -1,15 +1,26 @@
 class Point {
-    constructor(x, y) {
-        this.x = x;
-        this.y = y;
+
+    constructor(xxx, yyy) {
+        this.x = xxx;
+        this.y = yyy;
+    }
+
+    get x(){
+        return this.x;
+    }   
+
+    set x(xx){
+        this.x = xx;
     }
 
     static determineMinimum(p1, p2) {
+        console.log("p1.x" + p1.x);
         return Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2));
     }
 
     static determineMinimumOfArray(points) {
-        console.log('points'+points[0].x);
+       // console.log('points.length'+points.length);
+        //console.log('points'+points[0].x);
         if (points.length < 1) {
             throw new IllegalArgumentException("too less points");
         }
