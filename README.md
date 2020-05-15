@@ -18,6 +18,10 @@ npm test
 
 ## Run
 ### CMD Version
+npm run start
+
+or 
+
 node src/nodeJsCalcPointsApp.js
 
 Output:

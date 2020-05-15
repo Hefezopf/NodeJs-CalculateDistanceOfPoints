@@ -16,7 +16,8 @@
     "request": "^2.88.2"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start" : "node src/nodeJsCalcPointsApp.js"
   },
   "repository": {
     "type": "git",
