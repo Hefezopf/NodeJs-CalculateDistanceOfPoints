@@ -1,7 +1,7 @@
 # NodeJs-CalculateDistanceOfPoints
 The Javascript NodeJs Program calculates the minimum distance of points.
 
-Sample Coordinates: 
+Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1) 
 
 ![Coordinates](src/resources/Coordinates.png "Coordinates")
 
