@@ -5,14 +5,14 @@ var http = require('http');
 http.createServer(function (request, response) {
     response.writeHead(200, {'Content-Type': 'text/plain'});
 
-    const p1 = new Point(1, 4);
-    const p2 = new Point(2, 3);
-    const p3 = new Point(3, 2);
-    const p4 = new Point(4, 1);
+    const pA = new Point(1, 1);
+    const pB = new Point(1, 3);
+    const pC = new Point(4, 4);
+    const pD = new Point(6, 1);
     
-    const points = [p1, p2, p3, p4];
+    const points = [pA, pB, pC, pD];
     
-    response.write("determineMinimum:" + Point.determineMinimum(p1, p2));
+    response.write("determineMinimum:" + Point.determineMinimum(pA, pB));
     response.end("\ndetermineMinimumOfArray:" + Point.determineMinimumOfArray(points));    
 
 }).listen(8080);
