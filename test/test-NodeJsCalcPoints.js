@@ -27,7 +27,7 @@ describe('Point', function () {
       const points = [p1, p2, p3, p4];
       var value = Point.determineMinimumOfArray(points);
 
-      expect(value).to.equal(1.4142135623730951);
+      expect(value).to.equal(111.4142135623730951);
     });
   });
 });
