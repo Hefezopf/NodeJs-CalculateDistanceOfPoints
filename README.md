@@ -37,3 +37,11 @@ node src/nodeJsCalcPointsWeb (or with extension .js)
 node src/nodeJsCalcPointsWeb.js
 
 http://localhost:8080/
+
+
+## Travis
+
+Each commit to GitHub will result in a automated online travis CI/CD build.
+
+https://travis-ci.com/github/Hefezopf/NodeJs-CalculateDistanceOfPoints
+
