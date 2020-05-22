@@ -19,15 +19,15 @@ describe('Point', function () {
   describe('determineMinimumOfArray', function () {
     it('When points array given, then the minimum must be correct', () => {
 
-      const p1 = new Point(1, 4);
-      const p2 = new Point(2, 3);
-      const p3 = new Point(3, 2);
-      const p4 = new Point(4, 1);
+      const pA = new Point(1, 1);
+      const pB = new Point(1, 3);
+      const pC = new Point(4, 4);
+      const pD = new Point(6, 1);
       
-      const points = [p1, p2, p3, p4];
+      const points = [pA, pB, pC, pD];
       var value = Point.determineMinimumOfArray(points);
 
-      expect(value).to.equal(111.4142135623730951);
+      expect(value).to.equal(2.0);
     });
   });
 });
