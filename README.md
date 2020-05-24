@@ -37,6 +37,10 @@ or run with params
 
 **npm run start "(4,3) (5,2) (1,1) (1,2)"**
 
+or
+
+**node src/nodeJsCalcPointsApp.js "(4,3) (5,2) (1,1) (1,2)"**
+
 Calling the app with this params should result in:
  
 Output:
