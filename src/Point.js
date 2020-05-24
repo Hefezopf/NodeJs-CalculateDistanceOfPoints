@@ -5,6 +5,26 @@ class Point {
         this.y = y;
     }
 
+	static parseAllCoords(allCoords) { // "(4,3) (5,2) (1,1) (1,2)""
+        var points = [];
+        var coords = allCoords.replace("[^\\w\\d]", "").toLowerCase().split(" ");
+        for (var coord in coords) {
+            var xy = Point.parseToCoord(coords[coord]);
+            points[coord] = new Point(xy[0], xy[1]);
+        }
+
+		return points;
+	}
+	
+	static parseToCoord(coords) {
+		var res = new Array(2);
+		var xy = coords.replace("[^\\w\\d]", "").toLowerCase().split("");
+        res[0] = parseInt(xy[1], 10);
+        res[1] = parseInt(xy[3], 10);
+
+		return res;
+    }
+        
     static determineMinimum(p1, p2) {
         return Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2));
     }

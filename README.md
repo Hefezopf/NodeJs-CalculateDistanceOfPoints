@@ -25,13 +25,27 @@ Minimum distance of all points = 2.0
 
 or 
 
-node src/nodeJsCalcPointsApp.js
+**node src/nodeJsCalcPointsApp.js**
 
 Output:
 
 >Start App...
 >
 >Minimum distance of all points = 2.0
+
+or run with params
+
+**npm run start "(4,3) (5,2) (1,1) (1,2)"**
+
+Calling the app with this params should result in:
+ 
+Output:
+
+>Start App...
+>
+>Minimum distance of all points = 1.0
+
+Hint: Only use single digit numbers as point coordinates like (4,3)!
 
 
 ### Web Version
