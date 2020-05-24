@@ -9,16 +9,19 @@ Minimum distance of all points = 2.0
 
 
 ## Prepare
-npm install
+
+**npm install**
 
 
 ## Test
-npm test
+
+**npm test**
 
 
 ## Run
 ### CMD Version
-npm run start
+
+**npm run start**
 
 or 
 
@@ -26,15 +29,14 @@ node src/nodeJsCalcPointsApp.js
 
 Output:
 
-Start App...
-
-Minimum distance of all points = 2.0
+>Start App...
+>
+>Minimum distance of all points = 2.0
 
 
 ### Web Version
-node src/nodeJsCalcPointsWeb (or with extension .js)
 
-node src/nodeJsCalcPointsWeb.js
+**node src/nodeJsCalcPointsWeb.js**
 
 http://localhost:8080/
 
@@ -44,4 +46,3 @@ http://localhost:8080/
 Each commit to GitHub will result in a automated online travis CI/CD build.
 
 https://travis-ci.com/github/Hefezopf/NodeJs-CalculateDistanceOfPoints
-
