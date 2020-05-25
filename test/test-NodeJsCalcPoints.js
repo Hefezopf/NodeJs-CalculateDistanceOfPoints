@@ -17,7 +17,7 @@ describe('Point', function () {
       expect(res[2].x).to.equal(1);
       expect(res[2].y).to.equal(1);
       expect(res[3].x).to.equal(1);
-      expect(res[3].y).to.equal(2);
+      expect(res[3].y).to.equal(1);
     });
   });
 });
