@@ -1,11 +1,12 @@
 
 const { Point } = require('./Point');
+const { PointUtil } = require('./PointUtil');
 
 console.log('Start App...');
 
 points = [];
 if (process.argv.length == 3) {
-  points = Point.parseAllCoords(process.argv[2]);
+  points = PointUtil.parseAllCoords(process.argv[2]);
 } else {
   pointsFixed = [];
   pointsFixed[0] = new Point(1, 1);
@@ -15,4 +16,4 @@ if (process.argv.length == 3) {
   points = pointsFixed;
 }
 
-console.log("Minimum distance of all points = " + Point.determineMinimumOfArray(points));
+console.log("Minimum distance of all points = " + PointUtil.determineMinimumOfArray(points));
