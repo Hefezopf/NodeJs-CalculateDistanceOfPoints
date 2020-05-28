@@ -22,8 +22,26 @@ class PointUtil {
 		return res;
     }
         
-    static determineMinimum(p1, p2) {
+    static determineDistance(p1, p2) {
         return Math.sqrt(Math.pow((p2.x - p1.x), 2) + Math.pow((p2.y - p1.y), 2));
+    }
+
+    static determineMaximumOfArray(points) {
+        if (Object.keys(points).length <= 1) {
+            throw new IllegalArgumentException("too less points");
+        }
+        var max = 0;
+        var i = 0;
+        for (var point in points) {
+            var startPoint = points[point]
+            if (startPoint == null) {
+                throw new IllegalArgumentException("startPoint is null");
+            }
+            max = PointUtil.calculateMaximum(points, startPoint, max, i);
+            i++;
+        }
+
+        return max;
     }
 
     static determineMinimumOfArray(points) {
@@ -35,18 +53,29 @@ class PointUtil {
         for (var point in points) {
             var startPoint = points[point]
             if (startPoint == null) {
-                throw new IllegalArgumentException("");
+                throw new IllegalArgumentException("startPoint is null");
             }
-            min = PointUtil.calculate(points, startPoint, min, i);
+            min = PointUtil.calculateMinimum(points, startPoint, min, i);
             i++;
         }
 
         return min;
     }
 
-    static calculate(points, startPoint, min, startVal) {
+    static calculateMaximum(points, startPoint, max, startVal) {
         for (var i = startVal + 1; i < Object.keys(points).length; i++) {
-            var minTemp = PointUtil.determineMinimum(startPoint, points[i]);
+            var maxTemp = PointUtil.determineDistance(startPoint, points[i]);
+            if (maxTemp > max) {
+                max = maxTemp;
+            }
+        }
+
+        return max;
+    }
+
+    static calculateMinimum(points, startPoint, min, startVal) {
+        for (var i = startVal + 1; i < Object.keys(points).length; i++) {
+            var minTemp = PointUtil.determineDistance(startPoint, points[i]);
             if (minTemp < min) {
                 min = minTemp;
             }

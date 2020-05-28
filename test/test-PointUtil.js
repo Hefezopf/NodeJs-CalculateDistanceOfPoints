@@ -3,6 +3,11 @@ const { PointUtil } = require('../src/PointUtil');
 
 var expect = require('chai').expect;
 
+const pA = new Point(1, 1);
+const pB = new Point(1, 3);
+const pC = new Point(4, 4);
+const pD = new Point(6, 1);
+
 describe('PointUtil', function () {
   describe('parseAllCoords', function () {
     it('When all coords given, then the all x, y must be correct', () => {
@@ -44,12 +49,58 @@ describe('PointUtil', function () {
     });
   });
 
+
+  describe('determineDistance1', function () {
+    it('When determineDistance, then it must be correct', () => {
+      var xy = PointUtil.determineDistance(new Point(1, 1), new Point(1, 3));
+
+      expect(xy).to.equal(2.0);
+    });
+  });
+
+  describe('determineDistance2', function () {
+    it('When determineDistance, then it must be correct', () => {
+      var xy = PointUtil.determineDistance(new Point(1, 1), new Point(4, 4));
+
+      expect(xy).to.equal(4.242640687119285);
+    });
+  });
+
+  describe('determineMaximumOfArray1', function () {
+    it('When points array given, then the maximum must be correct', () => {
+      const points = [pA, pB, pC];
+
+      var value = PointUtil.determineMaximumOfArray(points);
+
+      expect(value).to.equal(4.242640687119285);
+    });
+  });
+
+
+  describe('determineMaximumOfArray2', function () {
+    it('When points array given, then the maximum must be correct', () => {
+      const points = [pA, pB, pC, pD];
+
+      var value = PointUtil.determineMaximumOfArray(points);
+
+      expect(value).to.equal(5.385164807134504);
+    });
+  });
+
+
+  describe('determineMaximumOfArray3', function () {
+    it('When points array given, then the maximum must be correct', () => {
+      const points = [pA, pC, pD];
+
+      var value = PointUtil.determineMaximumOfArray(points);
+
+      expect(value).to.equal(5.0);
+    });
+  });
+
   describe('determineMinimumOfArray1', function () {
     it('When points array given, then the minimum must be correct', () => {
-      const pA = new Point(1, 1);
-      const pB = new Point(4, 4);
-      const pC = new Point(6, 1);
-      const points = [pA, pB, pC];
+      const points = [pA, pC, pD];
 
       var value = PointUtil.determineMinimumOfArray(points);
 
@@ -59,10 +110,6 @@ describe('PointUtil', function () {
 
   describe('determineMinimumOfArray2', function () {
     it('When points array given, then the minimum must be correct', () => {
-      const pA = new Point(1, 1);
-      const pB = new Point(1, 3);
-      const pC = new Point(4, 4);
-      const pD = new Point(6, 1);
       const points = [pA, pB, pC, pD];
 
       var value = PointUtil.determineMinimumOfArray(points);

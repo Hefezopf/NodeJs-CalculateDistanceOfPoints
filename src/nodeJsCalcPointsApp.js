@@ -17,3 +17,4 @@ if (process.argv.length == 3) {
 }
 
 console.log("Minimum distance of all points = " + PointUtil.determineMinimumOfArray(points));
+console.log("Maximum distance of all points = " + PointUtil.determineMaximumOfArray(points));
