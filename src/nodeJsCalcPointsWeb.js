@@ -12,8 +12,8 @@ http.createServer(function (request, response) {
     
     const points = [pA, pB, pC, pD];
     
-    response.write("determineMinimum:" + Point.determineMinimum(pA, pB));
-    response.end("\ndetermineMinimumOfArray:" + Point.determineMinimumOfArray(points));    
+    response.write("\nMinimum distance of all points = " + Point.determineMinimumOfArray(points));    
+    response.end("\nMaximum distance of all points = " + Point.determineMaximumOfArray(points));    
 
 }).listen(8080);
 
