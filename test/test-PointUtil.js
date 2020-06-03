@@ -72,7 +72,7 @@ describe('PointUtil', function () {
 
       var value = PointUtil.determineMaximumOfArray(points);
 
-      expect(value).to.equal(4.242640687119285);
+      expect(value).to.equal(4.24);
     });
   });
 
@@ -83,7 +83,7 @@ describe('PointUtil', function () {
 
       var value = PointUtil.determineMaximumOfArray(points);
 
-      expect(value).to.equal(5.385164807134504);
+      expect(value).to.equal(5.39);
     });
   });
 
@@ -104,7 +104,7 @@ describe('PointUtil', function () {
 
       var value = PointUtil.determineMinimumOfArray(points);
 
-      expect(value).to.equal(3.605551275463989);
+      expect(value).to.equal(3.61);
     });
   });
 

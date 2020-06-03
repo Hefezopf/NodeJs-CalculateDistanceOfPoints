@@ -41,7 +41,7 @@ class PointUtil {
             i++;
         }
 
-        return max;
+        return PointUtil.limitValue(max, 3);
     }
 
     static determineMinimumOfArray(points) {
@@ -59,7 +59,13 @@ class PointUtil {
             i++;
         }
 
-        return min;
+        return PointUtil.limitValue(min, 3);
+    }
+
+    static limitValue(value, digits) {
+        var s = new Intl.NumberFormat('en', { maximumSignificantDigits: digits, minimumSignificantDigits: digits }).format(value)
+
+        return parseFloat(s)
     }
 
     static calculateMaximum(points, startPoint, max, startVal) {
