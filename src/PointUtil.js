@@ -48,7 +48,7 @@ class PointUtil {
         if (Object.keys(points).length <= 1) {
             throw new IllegalArgumentException("too less points");
         }
-        var min = 999999;
+        var min = Number.MAX_SAFE_INTEGER;
         var i = 0;
         for (var point in points) {
             var startPoint = points[point]

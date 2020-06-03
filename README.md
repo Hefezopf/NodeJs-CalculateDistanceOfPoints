@@ -6,6 +6,7 @@ Sample Coordinates: A(1, 1), B(1, 3), C(4, 4), D(6, 1)
 ![Coordinates](src/resources/Coordinates.png "Coordinates")
 
 Minimum distance of all points = 2.0
+
 Maximum distance of all points = 5.385164807134504
 
 
